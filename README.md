@@ -2,9 +2,12 @@
 
 This application is designed to let a user add or delete subreddits for their viewing pleasure. They can also see the posts related to those subreddits.
 
+## Prerequsites
+Please have npm and node installed.
+
 ## Setup
 
-Clone the repository and navigate into it. Once inside, type npm install to install all necessary modules related to the application. 
+Clone the repository and navigate into it. Once inside, type npm install -g serve. This will install the serve command so you can see the application running properly. 
 
 ## Running the application
 
