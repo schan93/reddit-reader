@@ -1,0 +1,41 @@
+<!doctype html>
+<html ng-app="app">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0/angular.min.js"></script>
+		<script src="js/app.js"></script>
+	</head>
+	<body ng-app="myApp" ng-controller="SearchController" class="container">
+  	<nav class="navbar">
+		<form class="form-inline" ng-submit="getPosts(searchText)">
+			<div class="input-group">
+				<input class="form-control" type="text" ng-model="searchText" placeholder="Search for a subreddit">
+				<div class="input-group-btn">
+					<button class="btn btn-primary" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+				</div>
+			</div>
+		</form>
+	</nav>
+	<div class="row">
+    	<div class="col-sm-3 col-md-2">
+			<ul class="lists">
+				<li class="subreddits" ng-repeat="(key, value) in subreddits">
+    				<button ng-hide="key == 'news'" type="button" class="close pull-right" aria-label="Close" ng-click="delete(key)">
+						<span aria-hidden="true">&times;</span>
+					</button>   
+					<a class="reddit-url" href="#" ng-click="clickLink(key)">{{key}}</a> 	
+				</li>
+			</ul>
+      	</div>
+      	<div class="col-sm-9 col-md-10">
+      		<ul class="lists">
+      			<li ng-repeat="post in posts">
+      				<a ng-href="{{post.data.url}}">{{post.data.title}}</a>
+      			</li>
+      		</ul>
+    	</div>
+  	</div>
+	</body>
+</html>

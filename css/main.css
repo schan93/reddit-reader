@@ -1,0 +1,16 @@
+.form-inline {
+	padding-top: 15px;
+}
+
+.lists {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+.subreddits {
+	padding: 5px 15px;
+}
+
+.reddit-url {
+	word-wrap: break-word;
+}

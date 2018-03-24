@@ -1,0 +1,15 @@
+{
+  "name": "wonderworkshop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "dependencies": {
+    "serve": "^6.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Chan",
+  "license": "ISC"
+}
